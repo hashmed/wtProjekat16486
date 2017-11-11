@@ -1,3 +1,22 @@
+@media only screen and (max-width: 700px) {
+    
+    .login-container {
+        flex-wrap: wrap;
+        min-width: auto !important;
+        max-width: 270px;
+        margin: 110px 20px 0px 20px;
+    }
+
+    .login-container .login-form,
+    .login-container .register-form {
+        width: 100%;
+    }
+
+    .login-container .register-form {
+        margin-top: 20px;
+    }
+}
+
 .body-wrapper.login {
     align-items: center;
 }

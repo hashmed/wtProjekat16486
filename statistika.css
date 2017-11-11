@@ -1,3 +1,27 @@
+@media only screen and (max-width: 700px) {
+    
+    .stat-container {
+        margin-top: 110px !important;
+    }
+
+    .stat-container .info {
+        flex-wrap: wrap;
+        height: auto !important;
+    }
+    
+    .stat-container .info .left {
+        width: 100% !important;
+    }
+
+    .stat-container .info .left .info-wrapper div {
+        text-align: center;
+    }
+
+    .stat-container .info .right {
+        margin-bottom: 10px;
+    }
+}
+
 .stat-container {
     width: 600px;
     margin: 20px 0px;

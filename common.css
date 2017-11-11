@@ -1,3 +1,26 @@
+@media only screen and (max-width: 700px) {
+    
+    .body-wrapper {
+        height: auto !important;
+    }
+
+    .menu-wrapper .menu {
+        display: block !important;
+        width: auto !important;
+        background-color: #EAFBFA;
+    }
+    
+    .menu-wrapper .menu .menu-nav {
+        display: block !important;
+        background-color: #EAFBFA;
+    }
+
+    .menu-wrapper .menu img {
+        height: 100%;
+        margin-left: 55px;
+    }
+}
+
 body {
     margin: 0;
     background-color:#003632;
