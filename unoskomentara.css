@@ -1,0 +1,27 @@
+.body-wrapper.unos-komentara {
+    height: auto;
+}
+
+.unos-komentara-container {
+    width: 600px;
+    margin: 20px 0px;
+    background: #EAFBFA;
+    border: 1px solid black;
+}
+
+.unos-komentara-container .navigacija input[type="button"] {
+    margin-left: 4px;
+}
+
+.unos-komentara-container table {
+    width: 100%;
+    margin-bottom: 3px
+}
+
+.unos-komentara-container table th {
+    background-color: lightgray;
+}
+
+.unos-komentara-container table tr > td {
+    padding-left: 2px;
+}

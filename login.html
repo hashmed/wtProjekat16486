@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="common.css">
+        <link rel="stylesheet" type="text/css" href="login.css">
+    </head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <body>
+        <div class="menu-wrapper">
+            <div class="menu">
+                <img src="content/wtlogo.png" alt="Logo">
+                <div class="menu-nav">
+                    <div class="wt-flex-center-v">
+                        <a href="login.html">Login</a>
+                    </div>
+                    <div class="wt-flex-center-v">
+                        <a href="statistika.html">Statistika</a>
+                    </div>
+                    <div class="wt-flex-center-v">
+                        <a href="unoskomentara.html">Unos komentara</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-wrapper login">
+            <div class="login-container">
+                <form class="login-form" action="POST">
+                        
+                    <div>Email:</div>
+                    <input type="email" />
+                    
+                    <div>Password:</div>
+                    <input type="password" />
+
+                    <input type="submit" value="Login" />
+                </form>
+        
+                <form class="register-form" action="POST">
+        
+                    <div>Email:</div>
+                    <input type="email" />
+        
+                    <div>Broj indexa:</div>
+                    <input type="number" />
+        
+                    <div>Nastavna grupa:</div>
+                    <select name="nastavnaGrupa">
+                            <option value="RI">RI</option>
+                            <option value="AE">AE</option>
+                            <option value="TK">TK</option>
+                            <option value="EE">EE</option>
+                    </select>
+        
+                    <div>Password:</div>
+                    <input type="password" />
+        
+                    <div>Confirm password:</div>
+                    <input type="password" />
+
+                    <input type="submit" value="Register" />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

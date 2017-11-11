@@ -1,0 +1,38 @@
+.body-wrapper.login {
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    min-width: 600px;
+}
+
+.login-container form {
+    min-width: 250px;
+    padding: 10px;
+    box-shadow: 1px 0px 12px 0px #EAFBFA
+}
+
+.login-container .login-form,
+.login-container .register-form {
+    background-color: #EAFBFA;
+}
+
+.login-container .login-form input[type="submit"] {
+    margin-top: 189px;
+}
+
+.login-container .register-form input[type="submit"] {
+    margin-top: 30px;
+}
+
+.login-container .login-form input,
+.login-container .register-form input,
+.login-container .login-form select,
+.login-container .register-form select {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}

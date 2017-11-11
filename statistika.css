@@ -1,0 +1,115 @@
+.stat-container {
+    width: 600px;
+    margin: 20px 0px;
+    background: #EAFBFA;
+    border: 1px solid black;
+}
+
+.stat-container > div:not(.details) {
+    border-bottom: 1px solid black;
+}
+
+.stat-container .title {
+    padding-left: 24px;
+}
+
+.stat-container .subtitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-container .subtitle div {
+    padding: 0px 24px;
+}
+
+.stat-container .subtitle .student-name {
+    font-size: 12px;
+}
+
+.stat-container .info {
+    display: flex;
+    height: 240px;
+}
+
+.stat-container .info .left {
+    width: 30%;
+    border-right: 1px solid black;
+}
+
+.stat-container .info .left .info-wrapper {
+    margin-top: 40px;
+}
+
+.stat-container .info .left .info-wrapper div {
+    height: 30px;
+    padding-left: 30px;
+}
+
+.stat-container .info .right {
+    flex: 1;
+}
+
+.stat-container .info .right table,
+.stat-container .info .right th,
+.stat-container .info .right td {
+    height: 30px;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+.stat-container .info .right th,
+.stat-container .info .right tr td:first-child {
+    background-color: lightgray;
+}
+
+.stat-container .info .right table tr:nth-child(even) {
+    background-color: mintcream;
+}
+
+.stat-container .info .right table tr:nth-child(odd),
+.stat-container .comments {
+    background-color: white;
+}
+
+.stat-container .details .wt-title-m {
+    border: 1px solid black;
+    margin: 20px 30px 0px 30px;
+    background-color: lightgray;
+}
+
+.stat-container .details .content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 60px;
+}
+
+.stat-container .details .content .wt-area-s {
+    margin: 5px 20px;
+}
+
+.stat-container .details .nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.stat-container .details .nav-buttons input[type="button"] {
+    width: 30px;
+    height: 26px;
+    cursor: pointer;
+    background-color: honeydew;
+    border-width: 1px 0px 1px 1px;
+    border-style: solid;
+    border-color: brown;
+    color: brown;
+}
+
+.stat-container .details .nav-buttons input[type="button"]:last-child {
+    border-right: 1px solid brown;
+}
+
+.stat-container .details .nav-buttons input[type="button"]:focus {
+    background-color: brown;
+    color: white;
+    outline: none;
+}

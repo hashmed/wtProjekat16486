@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    background-color:#003632;
+}
+
+.body-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 96vh;
+}
+
+.menu-wrapper {
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-wrapper .menu {
+    display: flex;
+    width: 600px;
+    background-color: #EAFBFA;
+}
+
+.menu-wrapper .menu .menu-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.menu-wrapper .menu .menu-nav a {
+    font-size: 28px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+input[type="button"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0; 
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.wt-area-s {
+    width: 120px;
+    height: 180px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 0px 12px 0px #003632
+}
+
+.wt-area-s > textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.wt-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wt-flex-center-h {
+    display: flex;
+    justify-content: center;
+}
+
+.wt-flex-center-v {
+    display: flex;
+    align-items: center;
+}
+
+.wt-title-m {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.wt-row-m {
+    height: 30px;
+}
+
