@@ -6,7 +6,7 @@
     </head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <body>
+    <body onload="Login.setupPage()">
         <div class="menu-wrapper">
             <div class="menu">
                 <img src="content/wtlogo.png" alt="Logo">
@@ -36,31 +36,87 @@
                     <input type="submit" value="Login" />
                 </form>
         
-                <form class="register-form" action="POST">
-        
-                    <div>Email:</div>
-                    <input type="email" />
-        
-                    <div>Broj indexa:</div>
-                    <input type="number" />
-        
-                    <div>Nastavna grupa:</div>
-                    <select name="nastavnaGrupa">
-                            <option value="RI">RI</option>
-                            <option value="AE">AE</option>
-                            <option value="TK">TK</option>
-                            <option value="EE">EE</option>
-                    </select>
-        
-                    <div>Password:</div>
-                    <input type="password" />
-        
-                    <div>Confirm password:</div>
-                    <input type="password" />
+                <div>
+                    <form class="register-form" id="student-form" action="POST">
+            
+                        <input type="button" value="Registruj nastavnika" onclick="Login.setupPage(true)">
+    
+                        <div>Ime i prezime:</div>
+                        <input id="imeiprezime" type="text" onblur="Validacija.validirajImeiPrezime(document.getElementById('imeiprezime').value) ? Poruke.ocistiGresku(0) : Poruke.dodajPoruku(0)" />
+    
+                        <div>Broj indexa:</div>
+                        <input id="brojIndexa" type="number" onblur="Validacija.validirajIndex(document.getElementById('brojIndexa').value) ? Poruke.ocistiGresku(1) : Poruke.dodajPoruku(1)" />
+    
+                        <div>Broj grupe:</div>
+                        <input id="brojGrupe" type="number" onblur="Validacija.validirajGrupu(document.getElementById('brojGrupe').value) ? Poruke.ocistiGresku(2) : Poruke.dodajPoruku(2)"/>
+                        
+                        <div>Akademska godina:</div>
+                        <input id="akGodina" type="number" onblur="Validacija.validirajGrupu(document.getElementById('akGodina').value) ? Poruke.ocistiGresku(3) : Poruke.dodajPoruku(3)"/>
+            
+                        <div>Password:</div>
+                        <input id="password" type="password" onblur="Validacija.validirajPassword(document.getElementById('password').value) ? Poruke.ocistiGresku(5) : Poruke.dodajPoruku(5)"/>
+            
+                        <div>Confirm password:</div>
+                        <input id="confirmPassword" type="password" onblur="Validacija.validirajPotvrdu(document.getElementById('confirmPassword').value) ? Poruke.ocistiGresku(6) : Poruke.dodajPoruku(6)"/>
+    
+                        <div>Bitbucket url:</div>
+                        <input id="bitbucketURL" type="text" onblur="Validacija.validirajBitbucketURL(document.getElementById('bitbucketURL').value) ? Poruke.ocistiGresku(7) : Poruke.dodajPoruku(7)"/>
+    
+                        <div>Bitbucket SSH:</div>
+                        <input id="bitbucketSSH" type="text" onblur="Validacija.validirajBitbucketSSH(document.getElementById('bitbucketSSH').value) ? Poruke.ocistiGresku(8) : Poruke.dodajPoruku(8)"/>
+    
+                        <div>Naziv repozitorija:</div>
+                        <input id="nazivRepozitorija" type="text" onblur="Validacija.validirajNazivRepozitorija(null, document.getElementById('nazivRepozitorija').value) ? Poruke.ocistiGresku(9) : Poruke.dodajPoruku(9)"/>
+    
+                        <input type="submit" value="Register" />
+                    </form>
 
-                    <input type="submit" value="Register" />
-                </form>
+                    <form class="register-form" id="nastavnik-form" action="POST">
+                        
+                        <input type="button" value="Registruj studenta" onclick="Login.setupPage(false)">
+    
+                        <div>Ime i prezime:</div>
+                        <input id="imeiprezime" type="text" onblur="Validacija.validirajImeiPrezime(document.getElementById('imeiprezime').value) ? Poruke.ocistiGresku(0) : Poruke.dodajPoruku(0)"/>
+    
+                        <div>Korisnicko ime:</div>
+                        <input id="korisnickoIme" type="text" />
+    
+                        <div>Fakultetski email:</div>
+                        <input id="fakultetskiEmail" type="text"  onblur="Validacija.validirajFakultetski(document.getElementById('fakultetskiEmail').value) ? Poruke.ocistiGresku(4) : Poruke.dodajPoruku(4)"/>
+
+                        <div>Password:</div>
+                        <input id="password" type="password" onblur="Validacija.validirajPassword(document.getElementById('password').value) ? Poruke.ocistiGresku(5) : Poruke.dodajPoruku(5)"/>
+            
+                        <div>Confirm password:</div>
+                        <input id="confirmPassword" type="password" onblur="Validacija.validirajPotvrdu(document.getElementById('confirmPassword').value) ? Poruke.ocistiGresku(6) : Poruke.dodajPoruku(6)"/>
+    
+                        <div>Maksimalan broj grupa:</div>
+                        <input id="maxGrupa" type="number" onblur="Validacija.postaviMaxGrupa(document.getElementById('maxGrupa').value)"/>
+            
+                        <div>Trenutni semestar:</div>
+                        <input id="trenutniSemestar" type="text" onblur="Validacija.postaviTrenSemestar(document.getElementById('maxGrupa').value)"/>
+
+                        <div>Trenutna ak. godina:</div>
+                        <input id="akGodina" type="text" onblur="Validacija.validirajAkGod(document.getElementById('akGodina').value) ? Poruke.ocistiGresku(3) : Poruke.dodajPoruku(3)"/>
+
+                        <div>Naziv repozitorija:</div>
+                        <input id="nazivRepozitorija" type="text" onblur="Validacija.validirajNazivRepozitorija(null, document.getElementById('nazivRepozitorija').value) ? Poruke.ocistiGresku(9) : Poruke.dodajPoruku(9)"/>
+
+                        <input type="submit" value="Register" />
+                    </form>
+
+                    <div id="register-form-errors">
+                    </div>
+                    
+                </div>
+                
             </div>
+            
         </div>
+        
+
+        <script src="login.js"></script>
+        <script src="validacija.js"></script>
+        <script src="poruke.js"></script>
     </body>
 </html>

@@ -31,9 +31,9 @@
                     <input type="button" value="Spirala 3"/>
                     <input type="button" value="Spirala 4"/>
                 </div>
-                <div class="wt-flex-center">
-                    <table>
-                        <tr>
+                <div class="wt-flex-center">                        
+                    <table id="unos-komentara-tabela">
+                        <tr id="0">
                             <th>
                                 Šifra studenta
                             </th>
@@ -46,8 +46,14 @@
                             <th>
                                 Bodovi
                             </th>
+                            <th>
+                                
+                            </th>
+                            <th>
+                                
+                            </th>
                         </tr>
-                        <tr>
+                        <tr id="1">
                             <td>
                                 TBD
                             </td>
@@ -60,8 +66,14 @@
                             <td>
                                 <input type="number">
                             </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <img class="thumb-down" onclick="UnosKomentara.moveDown(1)"/>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr id="2">
                             <td>
                                 TBD
                             </td>
@@ -74,8 +86,14 @@
                             <td>
                                 <input type="number">
                             </td>
+                            <td>
+                                <img class="thumb-up" onclick="UnosKomentara.moveUp(2)"/>
+                            </td>
+                            <td>
+                                <img class="thumb-down" onclick="UnosKomentara.moveDown(2)"/>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr id="3">
                             <td>
                                 TBD
                             </td>
@@ -88,8 +106,14 @@
                             <td>
                                 <input type="number">
                             </td>
+                            <td>
+                                <img class="thumb-up" onclick="UnosKomentara.moveUp(3)"/>
+                            </td>
+                            <td>
+                                <img class="thumb-down" onclick="UnosKomentara.moveDown(3)"/>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr id="4">
                             <td>
                                 TBD
                             </td>
@@ -102,8 +126,14 @@
                             <td>
                                 <input type="number">
                             </td>
+                            <td>
+                                <img class="thumb-up" onclick="UnosKomentara.moveUp(4)"/>
+                            </td>
+                            <td>
+                                <img class="thumb-down" onclick="UnosKomentara.moveDown(4)"/>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr id="5">
                             <td>
                                 TBD
                             </td>
@@ -115,11 +145,19 @@
                             </td>
                             <td>
                                 <input type="number">
+                            </td>
+                            <td>
+                                <img class="thumb-up" onclick="UnosKomentara.moveUp(5)"/>
+                            </td>
+                            <td>
+                                
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
+        
+        <script src="unoskomentara.js"></script>
     </body>
 </html>

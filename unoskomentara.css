@@ -32,3 +32,18 @@
 .unos-komentara-container table tr > td {
     padding-left: 2px;
 }
+
+.unos-komentara-container table img {
+    width:18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+img.thumb-up {    
+    content: url("content/thumbup.png");
+}
+
+img.thumb-down {    
+    content: url("content/thumbdown.png");
+}

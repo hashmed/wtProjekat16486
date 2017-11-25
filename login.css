@@ -33,6 +33,10 @@
     box-shadow: 1px 0px 12px 0px #EAFBFA
 }
 
+.login-container .login-form {
+    max-height: 330px;
+}
+
 .login-container .login-form,
 .login-container .register-form {
     background-color: #EAFBFA;
@@ -54,4 +58,10 @@
     height: 30px;
     box-sizing: border-box;
     margin-bottom: 5px;
+}
+
+#register-form-errors {
+    margin-top: 5px;
+    max-width: 270px;
+    color: #EAFBFA;
 }
