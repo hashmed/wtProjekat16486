@@ -1,0 +1,27 @@
+[
+  {
+    "sifra_studenta": "A",
+    "tekst": "Komentar1",
+    "ocjena": 1
+  },
+  {
+    "sifra_studenta": "B",
+    "tekst": "",
+    "ocjena": 2
+  },
+  {
+    "sifra_studenta": "C",
+    "tekst": "Komentar3",
+    "ocjena": 3
+  },
+  {
+    "sifra_studenta": "D",
+    "tekst": "Komentar4",
+    "ocjena": 4
+  },
+  {
+    "sifra_studenta": "E",
+    "tekst": "Komentar5",
+    "ocjena": 5
+  }
+]

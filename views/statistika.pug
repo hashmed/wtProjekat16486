@@ -1,0 +1,96 @@
+extends layout
+
+block content
+    .body-wrapper.stat
+      .stat-container
+        .wt-flex-center-v.wt-title-m.wt-row-m.title WT code reviews
+        .wt-row-m.subtitle
+          .wt-flex-center-v Statistike studenta
+          .wt-flex-center-v.student-name Ime i prezime
+        .info
+          .left
+            .info-wrapper
+              div Broj indexa             
+              div Link na repozitorij 
+              div Prva parcijala 20 
+              div Druga parcijala 20
+          .wt-flex-center.right
+            table
+              tbody
+                tr
+                  th X                         
+                  th Spirala 1                 
+                  th Spirala 2                  
+                  th Spirala 3                  
+                  th Spirala 4              
+                tr
+                  td Student 1                  
+                  td
+                    a(href='') X1               
+                  td
+                    a(href='') X2             
+                  td
+                    a(href='') X3                
+                  td
+                    a(href='') X4         
+                tr
+                  td Student 2             
+                  td
+                    a(href='') X1              
+                  td
+                    a(href='') X2         
+                  td
+                    a(href='') X3       
+                  td
+                    a(href='') X4    
+                tr
+                  td Student 3
+                  td
+                    a(href='') X1            
+                  td
+                    a(href='') X2             
+                  td
+                    a(href='') X3                 
+                  td
+                    a(href='') X4           
+                tr
+                  td Student 4                   
+                  td
+                    a(href='') X1                 
+                  td
+                    a(href='') X2                
+                  td
+                    a(href='') X3                 
+                  td
+                    a(href='') X4       
+                tr
+                  td Student 5                
+                  td
+                    a(href='') X1               
+                  td
+                    a(href='') X2
+                  td
+                    a(href='') X3
+                  td
+                    a(href='') X4
+        .wt-flex-center.wt-title-m.wt-row-m.comments Komentari
+        .details
+          .wt-flex-center.wt-title-m.wt-row-m Spirala 1
+          .content
+            .wt-area-s
+              textarea(placeholder='komentar 1')
+            .wt-area-s
+              textarea(placeholder='komentar 2')
+            .wt-area-s
+              textarea(placeholder='komentar 3')
+            .wt-area-s
+              textarea(placeholder='komentar 4')
+            .wt-area-s
+              textarea(placeholder='komentar 5')
+          .nav-buttons
+            input(type='button', value='<<')
+            input(type='button', value='1', autofocus='')
+            input(type='button', value='2')
+            input(type='button', value='3')
+            input(type='button', value='4')
+            input(type='button', value='>>')

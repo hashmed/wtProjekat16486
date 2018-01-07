@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    .body-wrapper.unos-spiska
+        .unos-spiska-container
+            form.unos-spiska-form(action='/unosspiska/submit', method='POST')
+                textarea(name='data')
+                input(type='number', name='spirala')
+                input(type='submit', value='Submit')

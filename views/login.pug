@@ -1,0 +1,55 @@
+extends layout
+
+block content
+    .body-wrapper.login
+        .login-container
+            form.login-form(method='POST')
+                div Email:           
+                input(type='email')          
+                div Password:
+                input(type='password')
+                input(type='submit', value='Login')
+            div
+                form#student-form.register-form(method='POST')
+                    input(type='button', value='Registruj nastavnika', onclick='Login.setupPage(true)')
+                    div Ime i prezime:       
+                    input#imeiprezime(type='text', onblur="Validacija.validirajImeiPrezime(document.getElementById('imeiprezime').value) ? Poruke.ocistiGresku(0) : Poruke.dodajPoruku(0)")
+                    div Broj indexa:
+                    input#brojIndexa(type='number', onblur="Validacija.validirajIndex(document.getElementById('brojIndexa').value) ? Poruke.ocistiGresku(1) : Poruke.dodajPoruku(1)")
+                    div Broj grupe: 
+                    input#brojGrupe(type='number', onblur="Validacija.validirajGrupu(document.getElementById('brojGrupe').value) ? Poruke.ocistiGresku(2) : Poruke.dodajPoruku(2)")
+                    div Akademska godina:
+                    input#akGodina(type='number', onblur="Validacija.validirajGrupu(document.getElementById('akGodina').value) ? Poruke.ocistiGresku(3) : Poruke.dodajPoruku(3)")
+                    div Password:
+                    input#password(type='password', onblur="Validacija.validirajPassword(document.getElementById('password').value) ? Poruke.ocistiGresku(5) : Poruke.dodajPoruku(5)")
+                    div Confirm password:      
+                    input#confirmPassword(type='password', onblur="Validacija.validirajPotvrdu(document.getElementById('confirmPassword').value) ? Poruke.ocistiGresku(6) : Poruke.dodajPoruku(6)")
+                    div Bitbucket url:
+                    input#bitbucketURL(type='text', onblur="Validacija.validirajBitbucketURL(document.getElementById('bitbucketURL').value) ? Poruke.ocistiGresku(7) : Poruke.dodajPoruku(7)")
+                    div Bitbucket SSH:
+                    input#bitbucketSSH(type='text', onblur="Validacija.validirajBitbucketSSH(document.getElementById('bitbucketSSH').value) ? Poruke.ocistiGresku(8) : Poruke.dodajPoruku(8)")
+                    div Naziv repozitorija:
+                    input#nazivRepozitorija(type='text', onblur="Validacija.validirajNazivRepozitorija(null, document.getElementById('nazivRepozitorija').value) ? Poruke.ocistiGresku(9) : Poruke.dodajPoruku(9)")
+                    input(type='submit', value='Register')
+                form#nastavnik-form.register-form(style='display:none',method='POST')
+                    input(type='button', value='Registruj studenta', onclick='Login.setupPage(false)')
+                    div Ime i prezime:
+                    input#imeiprezime1(type='text', onblur="Validacija.validirajImeiPrezime(document.getElementById('imeiprezime1').value) ? Poruke.ocistiGresku(0) : Poruke.dodajPoruku(0)")
+                    div Korisnicko ime:
+                    input#korisnickoIme(type='text')
+                    div Fakultetski email:
+                    input#fakultetskiEmail(type='text', onblur="Validacija.validirajFakultetski(document.getElementById('fakultetskiEmail').value) ? Poruke.ocistiGresku(4) : Poruke.dodajPoruku(4)")
+                    div Password:
+                    input#password1(type='password', onblur="Validacija.validirajPassword(document.getElementById('password1').value) ? Poruke.ocistiGresku(5) : Poruke.dodajPoruku(5)")
+                    div Confirm password:
+                    input#confirmPassword1(type='password', onblur="Validacija.validirajPotvrdu(document.getElementById('confirmPassword1').value) ? Poruke.ocistiGresku(6) : Poruke.dodajPoruku(6)")
+                    div Maksimalan broj grupa:
+                    input#maxGrupa(type='number', onblur="Validacija.postaviMaxGrupa(document.getElementById('maxGrupa').value)")
+                    div Trenutni semestar: 
+                    input#trenutniSemestar(type='text', onblur="Validacija.postaviTrenSemestar(document.getElementById('maxGrupa').value)")
+                    div Trenutna ak. godina:  
+                    input#akGodina1(type='text', onblur="Validacija.validirajAkGod(document.getElementById('akGodina1').value) ? Poruke.ocistiGresku(3) : Poruke.dodajPoruku(3)")
+                    div Naziv repozitorija:       
+                    input#nazivRepozitorija1(type='text', onblur="Validacija.validirajNazivRepozitorija(null, document.getElementById('nazivRepozitorija1').value) ? Poruke.ocistiGresku(9) : Poruke.dodajPoruku(9)")
+                    input(type='submit', value='Register')
+                #register-form-errors

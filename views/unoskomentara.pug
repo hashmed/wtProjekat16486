@@ -1,0 +1,78 @@
+extends layout
+
+block content
+    .body-wrapper.unos-komentara
+      .unos-komentara-container
+        .wt-flex-center-v.wt-row-m.navigacija
+          input(type='button', value='Spirala 1')
+          input(type='button', value='Spirala 2')
+          input(type='button', value='Spirala 3')
+          input(type='button', value='Spirala 4')
+        .wt-flex-center
+          table#unos-komentara-tabela
+            tbody
+              tr#0
+                th Sifra studenta 
+                th Link do repozitorija      
+                th Komentar              
+                th Bodovi                     
+                th                         
+                th                   
+              tr#1
+                td TBD                         
+                td
+                  a(href='') Repo           
+                td
+                  input(type='text')                      
+                td
+                  input(type='number')        
+                td                          
+                td
+                  img.thumb-down(onclick='UnosKomentara.moveDown(1)')
+              tr#2
+                td TBD              
+                td
+                  a(href='') Repo       
+                td
+                  input(type='text')        
+                td
+                  input(type='number')        
+                td
+                  img.thumb-up(onclick='UnosKomentara.moveUp(2)')
+                td
+                  img.thumb-down(onclick='UnosKomentara.moveDown(2)')
+              tr#3
+                td TBD                      
+                td
+                  a(href='') Repo            
+                td
+                  input(type='text')           
+                td
+                  input(type='number')         
+                td
+                  img.thumb-up(onclick='UnosKomentara.moveUp(3)')
+                td
+                  img.thumb-down(onclick='UnosKomentara.moveDown(3)')
+              tr#4
+                td TBD                 
+                td
+                  a(href='') Repo              
+                td
+                  input(type='text')           
+                td
+                  input(type='number')        
+                td
+                  img.thumb-up(onclick='UnosKomentara.moveUp(4)')
+                td
+                  img.thumb-down(onclick='UnosKomentara.moveDown(4)')
+              tr#5
+                td TBD                   
+                td
+                  a(href='') Repo      
+                td
+                  input(type='text')          
+                td
+                  input(type='number')
+                td
+                  img.thumb-up(onclick='UnosKomentara.moveUp(5)')
+                td
