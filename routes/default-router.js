@@ -175,6 +175,79 @@ router.post('/izvjestaj', (req, res, next) => {
 
 router.post('/bodovi', (req, res, next) => {
     
+    getRequestBody(req, (body) => {
+        try {
+            var reqObj = JSON.parse(body);
+
+            if(!reqObj.spirala || !reqObj.index) {
+                res.status(500).json({
+                    message: "Podaci nisu u traženom formatu!",
+                    data: null
+                  });
+            }
+            else {
+
+                var indexiObj = require('./spisakS' + reqObj.spirala + '.json');
+
+                var studentiKojiSuPregledali = [];
+
+                //pronadji indekse studenata koji su pregledali rad datog studenta
+                for (var i = 0; i < indexiObj.length; i++) {
+
+                    if(indexiObj[i][0] == reqObj.index) {
+                        for(var j=1;j<indexiObj[i].length;j++){
+                            studentiKojiSuPregledali.push({
+                                fajl: 'markS' + reqObj.spirala + indexiObj[i][j] + '.json',
+                                sifra: indexToCodeMap[j]
+                            });
+                        }
+                    }
+                  }
+                  
+                var prosjek = 0;
+                var brojac = 0;
+                 
+                fs.readdir(__dirname, (err, fajlovi) => {
+
+                    if(err) {
+                        res.status(500).json({
+                            message: "Neuspjesno ucitavanje fajlova!",
+                            data: err
+                          });
+                    }
+
+                    //iteriranje kroz niz fajlova za citanje
+                    for(var i=0;i<studentiKojiSuPregledali.length;i++) {
+
+                        //ako fajl postoji u ovom folderu...
+                        if(fajlovi.indexOf(studentiKojiSuPregledali[i].fajl) != -1) {
+                            var fajl = require(__dirname + '/' + studentiKojiSuPregledali[i].fajl);
+
+                            //dodaj ocjenu i povecaj brojac
+                            for(var j=0;j<fajl.length;j++){
+                                if(fajl[j].sifra_studenta == studentiKojiSuPregledali[i].sifra){
+                                    prosjek += fajl[j].ocjena;
+                                    brojac++;
+                                }
+                            }
+                        }
+                    }
+
+                    var response = 'Student' + req.index + 'je ostvario u prosjeku ' + prosjek/brojac + 1 + 'mjesto.'
+                    res.status(200).json({
+                        poruka: response
+                      });
+                });
+            }
+            
+        }
+        catch(e){
+            res.status(500).json({
+                message: "Neocekivana greska!",
+                data: null
+              });
+        }
+    });
 });
 
 //nakon što je request body kompletano pročitan,
